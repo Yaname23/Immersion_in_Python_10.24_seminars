@@ -42,7 +42,7 @@ while True:
         account += decimal.Decimal(amount)
         count += 1
         print(f'Пополнение карты на  {amount}y.e., \nБаланс счёта {account}')
-    elif command == CMD_WITH: # нужно немного доработать, баланс уходит в минус
+    elif command == CMD_WITH: # нужно немного доработать эту часть, баланс уходит в минус
         withdr_pers = amount * PERS
         withdr_pers = (MIN_REMOV if withdr_pers < MIN_REMOV else MAX_REMOV if withdr_pers > MAX_REMOV else withdr_pers)
         if amount + withdr_pers >= account:
